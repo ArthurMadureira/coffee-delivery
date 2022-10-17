@@ -12,6 +12,22 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   gap: 0.75rem;
+
+  a {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: ${(props) => props.theme['yellow-100']};
+    color: ${(props) => props.theme['yellow-700']};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg path {
+      fill: ${(props) => props.theme['yellow-700']};
+    }
+  }
 `
 
 export const ButtonContainer = styled.button`
@@ -27,22 +43,6 @@ export const ButtonContainer = styled.button`
   display: flex;
   align-items: center;
   gap: 0.25rem;
-`
-
-export const LinkContainer = styled.a`
-  position: relative;
-  padding: 0.5rem;
-  border-radius: 6px;
-  background: ${(props) => props.theme['yellow-100']};
-  color: ${(props) => props.theme['yellow-700']};
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  svg path {
-    fill: ${(props) => props.theme['yellow-700']};
-  }
 `
 
 export const QuantityProductsContainer = styled.span`

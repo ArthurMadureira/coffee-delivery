@@ -2,7 +2,6 @@ import {
   HeaderContainer,
   Navbar,
   ButtonContainer,
-  LinkContainer,
   QuantityProductsContainer,
 } from './styles'
 
@@ -10,12 +9,15 @@ import Logo from '../../assets/Logo.png'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { useContext } from 'react'
 import { CoffesContext } from '../../contexts/CoffesListContext'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
   const { cartItems }: any = useContext(CoffesContext)
   return (
     <HeaderContainer>
-      <img src={Logo} alt="Logo da Coffe Delivery" />
+      <NavLink to="/">
+        <img src={Logo} alt="Logo da Coffe Delivery" />
+      </NavLink>
 
       <Navbar>
         <ButtonContainer>
@@ -23,13 +25,13 @@ export function Header() {
           Porto Alegre
         </ButtonContainer>
 
-        <LinkContainer href="">
+        <NavLink to="/checkout">
           <ShoppingCart size={22} />
 
           <QuantityProductsContainer>
             {cartItems.length}
           </QuantityProductsContainer>
-        </LinkContainer>
+        </NavLink>
       </Navbar>
     </HeaderContainer>
   )
