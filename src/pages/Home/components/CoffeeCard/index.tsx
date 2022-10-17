@@ -3,19 +3,50 @@ import {
   CategoriesList,
   CoffeeContainer,
   Price,
-  Quantity,
   ShopCartButton,
 } from './styles'
 
-import { CoffeesListContextDataType } from '../../../../contexts/CoffesListContext'
+import {
+  CoffeesListContextDataType,
+  CoffesContext,
+} from '../../../../contexts/CoffesListContext'
 import { ShoppingCartSimple } from 'phosphor-react'
+import { QuantityInput } from '../../../../components/QuantityInput'
+import { useContext, useState } from 'react'
 
 interface CoffeeProps {
   coffee: CoffeesListContextDataType
   img: string
 }
 
+interface CoffesContextProp {
+  coffes: CoffeesListContextDataType[]
+  coffesListObj: any
+  addCoffeeToCart: (coffee: CoffeesListContextDataType) => void
+  cartItems: []
+}
+
 export function CoffeeCard({ coffee, img }: CoffeeProps) {
+  const [quantity, setQuantity] = useState(1)
+  const { addCoffeeToCart }: CoffesContextProp = useContext(CoffesContext)
+
+  function handleIncrease() {
+    setQuantity((state: any) => state + 1)
+  }
+
+  function handleDecrease() {
+    setQuantity((state: any) => state - 1)
+  }
+
+  function handleAddCoffeeToCart() {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity,
+    }
+
+    addCoffeeToCart(coffeeToAdd)
+  }
+
   return (
     <CoffeeContainer key={coffee.id}>
       <img src={img} alt="" />
@@ -36,12 +67,13 @@ export function CoffeeCard({ coffee, img }: CoffeeProps) {
           <span>{coffee.price}</span>
         </Price>
 
-        <Quantity>
-          <button>-</button>
-          <span>{coffee.quantity}</span>
-          <button>+</button>
-        </Quantity>
-        <ShopCartButton>
+        <QuantityInput
+          onIncrease={handleIncrease}
+          onDecrease={handleDecrease}
+          quantity={quantity}
+        />
+
+        <ShopCartButton onClick={handleAddCoffeeToCart}>
           <ShoppingCartSimple size={32} />
         </ShopCartButton>
       </CardFooter>

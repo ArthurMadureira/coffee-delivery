@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from 'react'
+import { produce } from 'immer'
 
 import { coffees } from '../data/coffee'
 
@@ -25,17 +26,31 @@ const coffesListObj = coffees
 export function CoffesListContextProvider({
   children,
 }: CoffesListContextProps) {
-  const [coffeeQuantity, setCoffeeQuantity] = useState(1)
-  const [shopCart, setShopCart] = useState([])
+  const [cartItems, setCartItems] = useState<CoffeesListContextDataType[]>([])
+
+  function addCoffeeToCart(coffee: CoffeesListContextDataType) {
+    const coffeAlreadyExists = cartItems.findIndex(
+      (cartItem) => cartItem.id === coffee.id,
+    )
+
+    const newCart = produce(cartItems, (draft) => {
+      if (coffeAlreadyExists < 0) {
+        draft.push(coffee)
+      } else {
+        draft[coffeAlreadyExists].quantity += coffee.quantity
+      }
+    })
+
+    setCartItems(newCart)
+  }
 
   return (
     <CoffesContext.Provider
       value={{
         coffesListObj,
-        coffeeQuantity,
-        setCoffeeQuantity,
-        shopCart,
-        setShopCart,
+        cartItems,
+        setCartItems,
+        addCoffeeToCart,
       }}
     >
       {children}

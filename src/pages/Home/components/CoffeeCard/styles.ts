@@ -67,26 +67,6 @@ export const Price = styled.p`
   }
 `
 
-export const Quantity = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  background: ${(props) => props.theme['gray-300']};
-
-  padding: 0.5rem 0.6rem;
-
-  border-radius: 6px;
-
-  button {
-    background-color: transparent;
-    border: 0;
-    font-size: 1.5rem;
-    color: ${(props) => props.theme['purple-500']};
-
-    cursor: pointer;
-  }
-`
-
 export const ShopCartButton = styled.button`
   background: ${(props) => props.theme['purple-800']};
   padding: 0.5rem;
