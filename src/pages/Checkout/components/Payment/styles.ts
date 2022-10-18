@@ -43,6 +43,8 @@ export const PaymentTypeButton = styled.button`
   background: ${(props) => props.theme['gray-300']};
   color: ${(props) => props.theme['gray-700']};
 
+  text-transform: uppercase;
+
   border: 0;
   border-radius: 6px;
   transition: background 0.2s;
