@@ -10,6 +10,11 @@ export const FormContainer = styled.div`
   header {
     margin-bottom: 2rem;
 
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
     p {
       color: ${(props) => props.theme['gray-700']};
     }

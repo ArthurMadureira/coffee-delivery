@@ -7,6 +7,10 @@ export const InputContainer = styled.div`
 
   margin-bottom: 1rem;
 
+  input:focus {
+    outline: 1px solid ${(props) => props.theme['yellow-700']};
+  }
+
   &.street input {
     width: 100%;
   }

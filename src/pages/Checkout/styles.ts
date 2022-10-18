@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-export const CompleteOrder = styled.div`
+export const CheckoutContainer = styled.div`
+  width: 640px;
   h2 {
     font-family: 'Baloo 2';
     font-size: 1.525rem;
@@ -10,8 +11,10 @@ export const CompleteOrder = styled.div`
   }
 `
 
-export const CheckoutContainer = styled.div`
-  width: 640px;
+export const CompleteOrder = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 `
 
 export const AddressContainer = styled.div`

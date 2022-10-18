@@ -12,14 +12,14 @@ export function Form() {
       </InputContainer>
 
       <InputContainer className="grid-1">
-        <input type="text" placeholder="Número" required />
+        <input type="number" placeholder="Número" required />
         <input type="text" placeholder="Complemento(opcional)" />
       </InputContainer>
 
       <InputContainer className="place-infos">
         <input type="text" placeholder="Bairro" required />
         <input type="text" placeholder="Cidade" required />
-        <input type="text" placeholder="UF" required />
+        <input type="text" placeholder="UF" maxLength={2} required />
       </InputContainer>
     </form>
   )
