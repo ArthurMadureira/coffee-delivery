@@ -1,7 +1,7 @@
 import { Form } from './Form'
 import { FormContainer } from './styles'
 
-export function FormOrder() {
+export function FormOrder({ register, watch }: any) {
   return (
     <FormContainer>
       <header>
@@ -9,7 +9,7 @@ export function FormOrder() {
         <p>Informe o endereço onde deseja receber seu pedido</p>
       </header>
 
-      <Form />
+      <Form register={register} watch={watch} />
     </FormContainer>
   )
 }

@@ -5,7 +5,7 @@ export const coffees = [
     categories: ['Tradicional'],
     name: 'Expresso Tradicional',
     subtitle: 'O tradicional café feito com água quente e grãos moídos',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -14,7 +14,7 @@ export const coffees = [
     categories: ['Tradicional'],
     name: 'Expresso Americano',
     subtitle: 'Expresso diluído, menos intenso que o tradicional',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -23,7 +23,7 @@ export const coffees = [
     categories: ['Tradicional'],
     name: 'Expresso Cremoso',
     subtitle: 'Café expresso tradicional com espuma cremosa',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -32,7 +32,7 @@ export const coffees = [
     categories: ['Tradicional', 'Gelado'],
     name: 'Expresso Gelado',
     subtitle: 'Bebida preparada com café expresso e cubos de gelo',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -41,7 +41,7 @@ export const coffees = [
     categories: ['Tradicional', 'Com leite'],
     name: 'Café com Leite',
     subtitle: 'Meio a meio de expresso tradicional com leite vaporizado',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -50,7 +50,7 @@ export const coffees = [
     categories: ['Tradicional', 'Com leite'],
     name: 'Latte',
     subtitle: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -59,7 +59,7 @@ export const coffees = [
     categories: ['Tradicional', 'Com leite'],
     name: 'Capuccino',
     subtitle: 'Bebida com canela feita de doses iguais de café, leite e espuma',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -68,7 +68,7 @@ export const coffees = [
     categories: ['Tradicional', 'Com leite'],
     name: 'Mocaccino',
     subtitle: 'Café expresso com calda de chocolate, pouco leite e espuma',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -77,7 +77,7 @@ export const coffees = [
     categories: ['Especial', 'Com leite'],
     name: 'Chocolate Quente',
     subtitle: 'Bebida feita com chocolate dissolvido no leite quente e café',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -86,7 +86,7 @@ export const coffees = [
     categories: ['Especial', 'Alcoólico', 'Com leite'],
     name: 'Cubano',
     subtitle: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -95,7 +95,7 @@ export const coffees = [
     categories: ['Especial'],
     name: 'Havaiano',
     subtitle: 'Bebida adocicada preparada com café e leite de coco',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -104,7 +104,7 @@ export const coffees = [
     categories: ['Especial'],
     name: 'Árabe',
     subtitle: 'Bebida preparada com grãos de café árabe e especiarias',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
   {
@@ -113,7 +113,7 @@ export const coffees = [
     categories: ['Especial', 'Alcoólico'],
     name: 'Irlandês',
     subtitle: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
-    price: '9,90',
+    price: 9.9,
     quantity: 1,
   },
 ]

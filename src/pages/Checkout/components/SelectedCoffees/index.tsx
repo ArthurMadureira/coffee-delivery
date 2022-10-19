@@ -7,15 +7,15 @@ import {
   SelectedCoffeesContainer,
 } from './styled'
 
-export function SelectedCoffees({ cartItem }: any) {
+export function SelectedCoffees({ cartItem, setTotalPrice }: any) {
   return (
     <SelectedCoffeesContainer>
       <SelectedCoffeeCard>
-        <img src={`/coffesImages/Arab.png`} alt="" />
+        <img src={`/coffesImages/${cartItem.imgUrl}.png`} alt="" />
 
         <SelectedCoffeeCardBox>
           <header>
-            <h4>Expresso tradicional</h4>
+            <h4>{cartItem.name}</h4>
           </header>
 
           <ActionElementsContainer>
@@ -23,7 +23,7 @@ export function SelectedCoffees({ cartItem }: any) {
           </ActionElementsContainer>
         </SelectedCoffeeCardBox>
 
-        <PriceText>R$ 9,90</PriceText>
+        <PriceText>R$ {cartItem.price}</PriceText>
       </SelectedCoffeeCard>
     </SelectedCoffeesContainer>
   )

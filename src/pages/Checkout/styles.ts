@@ -89,4 +89,8 @@ export const ButtonSubmit = styled.button`
   &:hover {
     background: ${(props) => props.theme['yellow-700']};
   }
+
+  &:disabled {
+    opacity: 0.8;
+  }
 `
