@@ -8,7 +8,7 @@ export function QuantityInput({ quantity }: any) {
         <IconWrapper type="button">
           <Minus size={14} weight="fill" />
         </IconWrapper>
-        <span>1</span>
+        <span>{quantity}</span>
         <IconWrapper type="button">
           <Plus size={14} weight="fill" />
         </IconWrapper>

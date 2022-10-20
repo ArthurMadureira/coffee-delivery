@@ -37,6 +37,24 @@ export const ActionElementsContainer = styled.div`
   gap: 0.75rem;
 `
 
+export const RemoveButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+
+  padding: 0.5rem 0.6rem;
+
+  border-radius: 6px;
+
+  border: 0;
+
+  background: ${(props) => props.theme['gray-300']};
+  color: ${(props) => props.theme['gray-900']};
+
+  cursor: pointer;
+`
+
 export const PriceText = styled.span`
   font-size: 1rem;
   font-weight: 700;

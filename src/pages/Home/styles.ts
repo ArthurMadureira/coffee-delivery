@@ -7,7 +7,30 @@ export const IntroductionContainer = styled.div`
   grid-template-columns: 60% 1fr;
   align-items: flex-start;
 
+  width: 90vw;
+
   margin-bottom: 8.75rem;
+
+  img.big-coffee {
+    width: 29.75rem;
+    height: 22.5rem;
+  }
+
+  @media (max-width: 1150px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    img.big-coffee {
+      width: 27.75rem;
+      height: 20.5rem;
+      transform: translateX(-15%);
+      object-fit: cover;
+    }
+  }
 `
 
 export const LeftSideContainer = styled.div`
@@ -21,9 +44,20 @@ export const LeftSideContainer = styled.div`
 
   p {
     font-size: 1.25rem;
-    max-width: 588px;
+    max-width: 36.75rem;
     color: ${(props) => props.theme['gray-800']};
     margin-bottom: 4.125rem;
+  }
+
+  @media (max-width: 1150px) {
+    h2 {
+      font-size: 2.5rem;
+      max-width: 30rem;
+    }
+
+    p {
+      max-width: 30rem;
+    }
   }
 `
 
@@ -37,8 +71,15 @@ export const BenefitsList = styled.ul`
 
   span {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 `
 

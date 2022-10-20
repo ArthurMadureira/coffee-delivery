@@ -2,10 +2,12 @@ import styled from 'styled-components'
 
 export const CoffesListContainer = styled.div`
   margin-top: 6rem;
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
   gap: 6rem 4rem;
-  flex-wrap: wrap;
 
   h3 {
     font-family: 'Baloo 2';
@@ -18,5 +20,11 @@ export const CoffesListContainer = styled.div`
   p {
     font-size: 0.875rem;
     color: ${(props) => props.theme['gray-800']};
+  }
+
+  @media (max-width: 1300px) {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
   }
 `

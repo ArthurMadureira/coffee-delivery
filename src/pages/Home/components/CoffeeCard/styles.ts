@@ -15,8 +15,13 @@ export const CoffeeContainer = styled.div`
   border-radius: 6px 36px 6px 36px;
 
   img {
-    position: absolute;
-    top: -75px;
+    margin-top: -5rem;
+  }
+
+  @media (max-width: 1300px) {
+    img {
+      margin-top: -2rem;
+    }
   }
 `
 

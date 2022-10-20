@@ -40,7 +40,7 @@ export function Checkout() {
     },
   })
 
-  const { cartItems } = useContext<any>(CoffesContext)
+  const { cartItems, setCartItems } = useContext<any>(CoffesContext)
 
   const { register, handleSubmit, watch, reset } = form
 
@@ -88,6 +88,7 @@ export function Checkout() {
                 return (
                   <SelectedCoffees
                     key={item.id}
+                    setCartItems={setCartItems}
                     cartItem={item}
                     setTotalPrice={setTotalPrice}
                   />
@@ -109,6 +110,7 @@ export function Checkout() {
                 <span>Total</span>
                 <span>R$ {totalPrice + 3.5}</span>
               </Total>
+
               <ButtonSubmit disabled={isCompleted}>
                 <span>Confirmar Pedido</span>
               </ButtonSubmit>

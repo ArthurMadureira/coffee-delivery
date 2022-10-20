@@ -44,7 +44,7 @@ export function Home() {
             </span>
           </BenefitsList>
         </LeftSideContainer>
-        <img src={BigCoffee} alt="" />
+        <img src={BigCoffee} alt="" className="big-coffee" />
       </IntroductionContainer>
 
       <CoffesListSection>

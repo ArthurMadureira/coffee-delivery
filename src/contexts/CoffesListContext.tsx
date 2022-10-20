@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react'
+import React, { createContext, ReactNode, useState } from 'react'
 import { produce } from 'immer'
 
 import { coffees } from '../data/coffee'
@@ -13,9 +13,17 @@ export interface CoffeesListContextDataType {
   quantity: number
 }
 
-export const CoffesContext: any = createContext(
-  {} as CoffeesListContextDataType,
-)
+interface CoffesContextProps {
+  coffesListObj: typeof coffees
+  cartItems: CoffeesListContextDataType[]
+  setCartItems: React.Dispatch<
+    React.SetStateAction<CoffeesListContextDataType[]>
+  >
+  addCoffeeToCart: (coffee: CoffeesListContextDataType) => void
+  removeCoffeeFromCart: (cartId: number) => void
+}
+
+export const CoffesContext = createContext({} as CoffesContextProps)
 
 interface CoffesListContextProps {
   children: ReactNode
@@ -44,6 +52,12 @@ export function CoffesListContextProvider({
     setCartItems(newCart)
   }
 
+  function removeCoffeeFromCart(cartId: number) {
+    const newCartItems = cartItems.filter((item) => item.id !== cartId)
+
+    setCartItems(newCartItems)
+  }
+
   return (
     <CoffesContext.Provider
       value={{
@@ -51,6 +65,7 @@ export function CoffesListContextProvider({
         cartItems,
         setCartItems,
         addCoffeeToCart,
+        removeCoffeeFromCart,
       }}
     >
       {children}

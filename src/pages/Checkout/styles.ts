@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CheckoutContainer = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
@@ -13,6 +13,11 @@ export const CheckoutContainer = styled.div`
     margin-bottom: 1rem;
 
     color: ${(props) => props.theme['gray-800']};
+  }
+
+  @media (max-width: 1300px) {
+    display: flex;
+    flex-direction: column;
   }
 `
 
@@ -34,7 +39,9 @@ export const SelectedCoffeesContainer = styled.div`
   border-radius: 6px 44px 6px 44px;
 `
 
-export const CoffeesSelected = styled.div``
+export const CoffeesSelected = styled.div`
+  width: 100%;
+`
 
 export const PriceInfosContainer = styled.div`
   display: flex;

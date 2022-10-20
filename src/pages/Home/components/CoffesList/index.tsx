@@ -9,9 +9,6 @@ import { CoffesListContainer } from './styles'
 import { CoffeeCard } from '../CoffeeCard'
 
 interface CoffesContextProp {
-  coffes: CoffeesListContextDataType[]
-  setCoffeeQuantity: any
-  coffeeQuantity: number
   coffesListObj: any
 }
 
