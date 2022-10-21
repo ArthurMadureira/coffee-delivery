@@ -1,6 +1,6 @@
 # Coffe Delivery
 
-![]('../../.github/layout.png')
+[!]('../../.github/layout.png')
 
 ## Coffe Delivery is a application to manage a shopping cart of a fictitious coffee shop, which contains the following functionalities:
 
