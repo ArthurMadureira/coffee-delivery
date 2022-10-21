@@ -110,7 +110,7 @@ export function Checkout() {
 
               <Total>
                 <span>Total</span>
-                <span>R$ {totalPrice + 3.5}</span>
+                <span>R$ {totalPrice * cartItems.length + 3.5}</span>
               </Total>
 
               <ButtonSubmit
