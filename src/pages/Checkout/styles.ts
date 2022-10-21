@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const CheckoutContainer = styled.div`
+  padding-top: 5rem;
+
+  /* position: relative; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;

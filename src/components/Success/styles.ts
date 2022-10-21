@@ -1,9 +1,24 @@
 import styled from 'styled-components'
 
+export const Container = styled.div``
+
 export const SuccessContainer = styled.div`
+  background: ${(props) => props.theme.background};
+
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+
+  width: 100vw;
+  height: 100vh;
+  /* transform: translateX(-50%) translateY(-20%); */
+  /* transform: translateY(-50%); */
+  padding-bottom: 20rem;
+
   display: flex;
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 6.375rem;
 `
 
 export const Header = styled.header`

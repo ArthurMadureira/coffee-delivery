@@ -10,6 +10,7 @@ export const IntroductionContainer = styled.div`
   width: 90vw;
 
   margin-bottom: 8.75rem;
+  padding-top: 10rem;
 
   img.big-coffee {
     width: 29.75rem;

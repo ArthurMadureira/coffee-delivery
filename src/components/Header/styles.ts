@@ -4,8 +4,15 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  padding: 2rem;
 
   margin-bottom: 5.8rem;
+  width: 80vw;
+  margin: 0 auto;
+  background-color: ${(props) => props.theme.background};
+  z-index: 10000000000;
 `
 
 export const Navbar = styled.nav`

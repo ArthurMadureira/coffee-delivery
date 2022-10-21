@@ -16,6 +16,7 @@ import {
   Total,
 } from './styles'
 import { CoffesContext } from '../../contexts/CoffesListContext'
+import { Success } from '../../components/Success'
 
 const formValidationSchema = zod.object({
   cep: zod.number().min(14, 'CPF inválido').max(14, 'CPF inválido'),
@@ -57,6 +58,7 @@ export function Checkout() {
   const isCompleted = !cep || !street || !number || !district || !city
 
   const [totalPrice, setTotalPrice] = useState<any>([])
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const sumWithInitial = cartItems
@@ -111,13 +113,25 @@ export function Checkout() {
                 <span>R$ {totalPrice + 3.5}</span>
               </Total>
 
-              <ButtonSubmit disabled={isCompleted}>
+              <ButtonSubmit
+                disabled={isCompleted}
+                onClick={() => setIsOpen(true)}
+              >
                 <span>Confirmar Pedido</span>
               </ButtonSubmit>
             </PriceInfosContainer>
           </SelectedCoffeesContainer>
         </CoffeesSelected>
       </CheckoutContainer>
+      {isOpen && (
+        <Success
+          street={street}
+          number={number}
+          district={district}
+          city={city}
+          setIsOpen={isOpen}
+        />
+      )}
     </form>
   )
 }
