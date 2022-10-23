@@ -20,10 +20,7 @@ interface CoffeeProps {
 }
 
 interface CoffesContextProp {
-  coffes: CoffeesListContextDataType[]
-  coffesListObj: any
   addCoffeeToCart: (coffee: CoffeesListContextDataType) => void
-  cartItems: []
 }
 
 export function CoffeeCard({ coffee, img }: CoffeeProps) {
