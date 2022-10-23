@@ -7,7 +7,6 @@ interface SuccessProps {
   number: number
   district: string
   city: string
-  setIsOpen: boolean
   paymentMethod: string
 }
 
@@ -16,7 +15,6 @@ export function Success({
   number,
   district,
   city,
-  setIsOpen,
   paymentMethod,
 }: SuccessProps) {
   return (

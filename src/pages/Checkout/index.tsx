@@ -133,7 +133,6 @@ export function Checkout() {
           number={number}
           district={district}
           city={city}
-          setIsOpen={isOpen}
           paymentMethod={paymentMethod}
         />
       )}
