@@ -59,6 +59,9 @@ export function Checkout() {
 
   const [totalPrice, setTotalPrice] = useState<any>([])
   const [isOpen, setIsOpen] = useState(false)
+  const [paymentMethod, setPaymentMethod] = useState('Cartão de credito')
+
+  console.log(paymentMethod)
 
   useEffect(() => {
     const sumWithInitial = cartItems
@@ -79,7 +82,7 @@ export function Checkout() {
           <FormProvider {...form}>
             <FormOrder register={register} watch={watch} />
           </FormProvider>
-          <Payment />
+          <Payment setPaymentMethod={setPaymentMethod} />
         </CompleteOrder>
 
         <CoffeesSelected>
@@ -93,6 +96,7 @@ export function Checkout() {
                     setCartItems={setCartItems}
                     cartItem={item}
                     setTotalPrice={setTotalPrice}
+                    setPaymentMethod={setPaymentMethod}
                   />
                 )
               })}
@@ -130,6 +134,7 @@ export function Checkout() {
           district={district}
           city={city}
           setIsOpen={isOpen}
+          paymentMethod={paymentMethod}
         />
       )}
     </form>

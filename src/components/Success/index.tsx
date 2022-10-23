@@ -8,6 +8,7 @@ interface SuccessProps {
   district: string
   city: string
   setIsOpen: boolean
+  paymentMethod: string
 }
 
 export function Success({
@@ -16,6 +17,7 @@ export function Success({
   district,
   city,
   setIsOpen,
+  paymentMethod,
 }: SuccessProps) {
   return (
     <Container>
@@ -49,7 +51,9 @@ export function Success({
             <Info>
               <div>
                 <p>Pagamento na entrega</p>
-                <p>Cartão de Crédito</p>
+                <p>
+                  <strong>{paymentMethod}</strong>
+                </p>
               </div>
             </Info>
           </OrderInfos>

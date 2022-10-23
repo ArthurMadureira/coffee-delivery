@@ -5,7 +5,7 @@ import {
   PaymentTypeContainer,
 } from './styles'
 
-export function Payment() {
+export function Payment({ setPaymentMethod }: any) {
   return (
     <CheckoutContainer>
       <header>
@@ -17,15 +17,22 @@ export function Payment() {
       </header>
 
       <PaymentTypeContainer>
-        <PaymentTypeButton type="button">
+        <PaymentTypeButton
+          type="button"
+          onClick={(e) => setPaymentMethod(e.target.textContent)}
+        >
           <CreditCard size={16} color="#8047f8" />
           Cartão de Crédito
         </PaymentTypeButton>
-        <PaymentTypeButton>
+        <PaymentTypeButton
+          onClick={(e) => setPaymentMethod(e.target.textContent)}
+        >
           <Bank size={16} color="#8047f8" />
           Cartão de Débito
         </PaymentTypeButton>
-        <PaymentTypeButton>
+        <PaymentTypeButton
+          onClick={(e) => setPaymentMethod(e.target.textContent)}
+        >
           <Money size={16} color="#8047f8" />
           Dinheiro
         </PaymentTypeButton>
